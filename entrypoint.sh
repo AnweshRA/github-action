@@ -21,7 +21,7 @@ then
   rm commit_list.txt
 fi 
 
-if [ $? -eq 0 ]
+if [ $? -eq 1 ]
 then
   echo -e "\e[31m🛑 STOP! Gitleaks encountered leaks"
   echo "----------------------------------"
