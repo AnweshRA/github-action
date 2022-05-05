@@ -2,7 +2,7 @@
 
 #modified
 #CONFIG="--config /.gitleaks.toml"
-CONFIG="--config=/.gitleaks.toml"
+CONFIG="--config=.github/.gitleaks.toml"
 
 echo running gitleaks "$(gitleaks --version) with the following command :
 "
