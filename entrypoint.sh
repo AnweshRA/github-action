@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG="--config ./.gitleaks.toml"
+CONFIG="--config ./gitleaksaction/rules.toml"
 
 echo running gitleaks "$(gitleaks --version) with the following command👇"
 
