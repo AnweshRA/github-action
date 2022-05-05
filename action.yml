@@ -7,7 +7,7 @@ inputs:
   config-path:
     description: 'Path to config (relative to $GITHUB_WORKSPACE)'
     required: false
-    default: '.github/.gitleaks.toml'
+    default: '.gitleaks.toml'
 outputs:
   result: # id of output
     description: 'Gitleaks log output'
