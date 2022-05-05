@@ -2,12 +2,14 @@
 
 CONFIG=""
 # check if using gitleaks config or not
-if [ -f "$GITHUB_WORKSPACE/.github/.gitleaks.toml" ]
+if [ -f "$GITHUB_WORKSPACE/.gitleaks.toml" ]
 then
-  CONFIG=" --config=$GITHUB_WORKSPACE/.github/.gitleaks.toml"
+  CONFIG=" --config=$GITHUB_WORKSPACE/.gitleaks.toml"
 fi
 
 echo running gitleaks "$(gitleaks --version) with the following command👇"
+
+DONATE_MSG="👋 maintaining gitleaks takes a lot of work so consider sponsoring me or donating a little something\n\e[36mhttps://github.com/sponsors/zricethezav\n\e[36mhttps://www.paypal.me/zricethezav\n"
 
 if [ "$GITHUB_EVENT_NAME" = "push" ]
 then
@@ -25,9 +27,10 @@ if [ $? -eq 1 ]
 then
   echo -e "\e[31m🛑 STOP! Gitleaks encountered leaks"
   echo "----------------------------------"
+  echo -e $DONATE_MSG
   exit 1
 else
   echo -e "\e[32m✅ SUCCESS! Your code is good to go!"
   echo "------------------------------------"
-  
+  echo -e $DONATE_MSG
 fi
