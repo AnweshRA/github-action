@@ -27,7 +27,7 @@ then
   echo "------------------------------------"
   exit 1
 else
-  cho -e "\e[31m🛑 STOP! Gitleaks encountered leaks"
+  echo -e "\e[31m🛑 STOP! Gitleaks encountered leaks"
   echo "----------------------------------"
   
 fi
