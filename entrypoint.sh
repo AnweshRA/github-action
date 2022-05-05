@@ -23,11 +23,11 @@ fi
 
 if [ $? -eq 0 ]
 then
-  echo -e "\e[32m✅ SUCCESS! Your code is good to go!"
-  echo "------------------------------------"
-  exit 0
-else
   echo -e "\e[31m🛑 STOP! Gitleaks encountered leaks"
   echo "----------------------------------"
   exit 1
+else
+  echo -e "\e[32m✅ SUCCESS! Your code is good to go!"
+  echo "------------------------------------"
+  
 fi
