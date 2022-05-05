@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #modified
-CONFIG="--config ./.gitleaks.toml"
+CONFIG="--config /.gitleaks.toml"
 
 echo running gitleaks "$(gitleaks --version) with the following command :
 "
